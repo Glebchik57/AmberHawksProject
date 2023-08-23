@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'documents.apps.DocumentsConfig',
     'news.apps.NewsConfig',
     'players.apps.PlayersConfig',
+    'phonenumber_field',
 ]
 
 MIDDLEWARE = [
