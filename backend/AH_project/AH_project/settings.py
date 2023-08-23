@@ -37,11 +37,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'phonenumber_field',
-    'ContactFormConfig',
-    'DocumentsConfig',
-    'NewsConfig',
-    'PlayersConfig',
+    'api.apps.ApiConfig',
+    'contact_form.apps.ContactFormConfig',
+    'documents.apps.DocumentsConfig',
+    'news.apps.NewsConfig',
+    'players.apps.PlayersConfig',
 ]
 
 MIDDLEWARE = [

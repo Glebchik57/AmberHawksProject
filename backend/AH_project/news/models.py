@@ -40,7 +40,6 @@ class Games(models.Model):
     date = models.DateField()
     depth_chart = models.ManyToManyField(
         Players,
-        many=True,
         blank=True,
         null=True
     )

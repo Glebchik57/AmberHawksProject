@@ -8,11 +8,10 @@ TEAM_CHOICES = ('Amber Hawks', 'Amber Kids', 'Amber Knight', 'women ff team',)
 class Players(models.Model):
     first_name = models.CharField('Имя', max_length=50)
     last_name = models.CharField('Имя', max_length=50)
-    age = models.PositiveIntegerField(MaxValueValidator=99)
+    photo = models.ImageField(blank=True, null=True)
+    age = models.PositiveIntegerField()
     bday = models.DateField()
     number = models.PositiveIntegerField(
-        MinValueValidator=1,
-        MaxValueValidator=99,
         unique=True
     )
     position = models.CharField(choices=POSITION_CHOICES)
