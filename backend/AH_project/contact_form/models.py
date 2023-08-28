@@ -9,6 +9,7 @@ class Contact(models.Model):
     last_name = models.CharField('Фамилия', max_length=50)
     phone_number = PhoneNumberField(unique=True)
     team = models.CharField(choices=TEAM_CHOICES)
+    pub_date = models.DateTimeField(auto_now_add=True)
 
     class Meta:
         verbose_name = 'Обратная связь'
