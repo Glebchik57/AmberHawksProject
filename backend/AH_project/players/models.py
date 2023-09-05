@@ -1,8 +1,25 @@
 from django.db import models
 
-POSITION_CHOICES = ('QB', 'C', 'G', 'T', 'RB', 'WR',
-                    'TE', 'DT', 'DE', 'LB', 'CB', 'S',)
-TEAM_CHOICES = ('Amber Hawks', 'Amber Kids', 'Amber Knight', 'women ff team',)
+POSITION_CHOICES = (
+    ('QB', 'QB',),
+    ('C', 'C',),
+    ('G', 'G',),
+    ('T', 'T',),
+    ('RB', 'RB',),
+    ('WR', 'WR',),
+    ('TE', 'TE',),
+    ('DT', 'DT',),
+    ('DE', 'DE',),
+    ('LB', 'LB',),
+    ('CB', 'CB',),
+    ('S', 'S',),
+)
+TEAM_CHOICES = (
+    ('Amber Hawks', 'Amber Hawks',),
+    ('Amber Kids', 'Amber Kids',),
+    ('Amber Knight', 'Amber Knight',),
+    ('women ff team', 'women ff team',),
+)
 
 
 class Players(models.Model):
@@ -14,8 +31,8 @@ class Players(models.Model):
     number = models.PositiveIntegerField(
         unique=True
     )
-    position = models.CharField(choices=POSITION_CHOICES)
-    team = models.CharField(choices=TEAM_CHOICES)
+    position = models.CharField(choices=POSITION_CHOICES, max_length=10)
+    team = models.CharField(choices=TEAM_CHOICES, max_length=50)
 
     def __str__(self):
         return f'{self.position}: {self.first_name} {self.last_name}({self.number})'

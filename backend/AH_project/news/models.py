@@ -41,7 +41,6 @@ class Games(models.Model):
     depth_chart = models.ManyToManyField(
         Players,
         blank=True,
-        null=True
     )
     score = models.CharField(max_length=16, blank=True, null=True)
 

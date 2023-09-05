@@ -5,7 +5,8 @@ from rest_framework.routers import DefaultRouter
 from documents.views import DocumentsViewSet
 from news.views import EventsViewSet, NewsViewSet, GamesViewSet
 from players.views import PlayersViewSet
-from contact_form.views import ContactCreateVeiwset
+from contact_form.views import ContactCreate
+# from contact_form.views import ContactCreateVeiwset
 
 
 router = DefaultRouter()
@@ -15,7 +16,8 @@ router.register('events', EventsViewSet)
 router.register('news', NewsViewSet)
 router.register('games', GamesViewSet)
 router.register('players', PlayersViewSet)
-router.register('contacts', ContactCreateVeiwset)
+router.register('contacts', ContactCreate)
+# router.register('contacts', ContactCreateVeiwset)
 
 urlpatterns = [
     path('', include(router.urls)),
