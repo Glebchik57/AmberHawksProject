@@ -1,7 +1,7 @@
 asgiref==3.7.2
-Django==4.0
+Django==4.1
 django-phonenumber-field==7.1.0
-djangorestframework==3.13.1
+djangorestframework==3.14.0
 drf-extra-fields==3.7.0
 filetype==1.2.0
 phonenumberslite==8.13.19
