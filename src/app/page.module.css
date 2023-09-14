@@ -1,0 +1,21 @@
+.wrapper {
+    background-image: url('./../assets/img/header__img1.png');
+    width: 100%;
+    margin: 0 auto;
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.backgoundSchedule {
+    background: url('./../assets/img/trainingBackground.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}

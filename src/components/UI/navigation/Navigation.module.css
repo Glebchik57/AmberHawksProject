@@ -1,0 +1,51 @@
+.header {
+  background: rgba(0, 0, 0, 0.4);
+  
+}
+
+.logo {
+  content: "";
+  background: url(./../../../assets/img/logo.png);
+  width: 80px;
+  height: 76px;
+}
+
+.header__nav {
+  display: flex;
+  gap: 20px;
+}
+
+.header__text {
+  color: rgb(217, 215, 215);
+}
+
+.header__icons {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.vk {
+  content: "";
+  background: url(./../../../assets/icons/vk.svg);
+  background-color: white;
+  width: 30px;
+  height: 30px;
+  border-radius: 10px;
+  background-position: center;
+}
+
+.youtube {
+  content: "";
+  background: url(./../../../assets/icons/youtube.svg);
+  width: 30px;
+  height: 22px;
+}
+
+.container{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+}

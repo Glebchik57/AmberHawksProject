@@ -1,0 +1,13 @@
+.btn {
+  display: inline-flex;
+  width: 360px;
+  height: 70px;
+  padding: 20px 49px;
+  justify-content: center;
+  align-items: center;
+  background: #f9581c;
+  color: white;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 25px; 
+}

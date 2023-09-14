@@ -1,0 +1,27 @@
+.scheduleTitle {
+  color: var(--2, #fff);
+  font-family: Bitter;
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 120%; /* 48px */
+  padding: 20px 0px;
+  border-bottom: 2px solid white;
+}
+
+.schedule__list{
+  display: flex;
+  justify-content: center;
+  padding: 60px 0px 152px 0px; 
+}
+
+.schedule__item{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+  color: white;
+  padding: 80px;
+  border: 2px solid white;
+}

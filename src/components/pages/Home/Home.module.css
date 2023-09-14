@@ -1,0 +1,35 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  color: rgba(199, 199, 199, 0.653);
+  margin-top: 150px;
+}
+
+.main__city {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 25px;
+  /* 138.889% */
+}
+
+.main__title {
+  font-size: 150px;
+  font-weight: 700;
+  line-height: 120%;
+  /* 256.8px */
+  text-transform: uppercase;
+}
+
+.main__subtext {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 120%;
+  /* 48px */
+}
+
+.main__btn {
+  text-align: center;
+  margin-top: 50px;
+}
