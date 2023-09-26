@@ -1,0 +1,43 @@
+[tool.poetry]
+name = "amberhawksproject"
+version = "0.1.0"
+description = ""
+authors = ["Your Name <you@example.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+asgiref = "3.7.2"
+attrs = "23.1.0"
+django = "3.2"
+django-cors-headers = "4.2.0"
+django-phonenumber-field = "7.1.0"
+djangorestframework = "3.13.1"
+drf-extra-fields = "3.7.0"
+drf-spectacular = "0.26.4"
+drf-yasg = "1.21.7"
+filetype = "1.2.0"
+inflection = "0.5.1"
+jsonschema = "4.19.0"
+jsonschema-specifications = "2023.7.1"
+packaging = "23.1"
+phonenumberslite = "8.13.19"
+pillow = "10.0.0"
+pytz = "2023.3"
+pyyaml = "6.0.1"
+referencing = "0.30.2"
+rpds-py = "0.10.2"
+sqlparse = "0.4.4"
+tzdata = "2023.3"
+uritemplate = "4.1.1"
+python-dotenv = "^1.0.0"
+python-telegram-bot = "13.7"
+ruff = "^0.0.291"
+mypy = "^1.5.1"
+django-stubs = {extras = ["compatible-mypy"], version = "^4.2.4"}
+black = "^23.9.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
