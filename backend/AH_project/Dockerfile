@@ -7,7 +7,7 @@ COPY poetry.lock .
 
 RUN python -m pip install --no-cache-dir poetry==1.6.1
 RUN poetry config virtualenvs.create false
-RUN poetry install
+RUN poetry install --without dev
 
 FROM python:3.11-slim
 
