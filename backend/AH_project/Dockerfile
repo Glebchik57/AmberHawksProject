@@ -1,4 +1,4 @@
-FROM python:3.11-slim
+FROM python:3.11-slim AS builder
 
 WORKDIR /app
 
@@ -9,13 +9,10 @@ RUN python -m pip install --no-cache-dir poetry==1.6.1
 RUN poetry config virtualenvs.create false
 RUN poetry install
 
-COPY . .
-
-WORKDIR /app/contact_form
-
-ARG TG_TOKEN
-ARG TG_ID
+FROM python:3.11-slim
 
 WORKDIR /app
+
+COPY . .
 
 CMD ["python", "manage.py", "runserver", "0:8000"]
