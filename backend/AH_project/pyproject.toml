@@ -32,9 +32,11 @@ tzdata = "2023.3"
 uritemplate = "4.1.1"
 python-dotenv = "^1.0.0"
 python-telegram-bot = "13.7"
+django-stubs = {extras = ["compatible-mypy"], version = "^4.2.4"}
+
+[tool.poetry.group.dev.dependencies]
 ruff = "^0.0.291"
 mypy = "^1.5.1"
-django-stubs = {extras = ["compatible-mypy"], version = "^4.2.4"}
 black = "^23.9.1"
 
 
