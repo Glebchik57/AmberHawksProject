@@ -1,17 +1,19 @@
 .wrapper {
-    color: white;
-    margin-bottom: 150px;
+  color: white;
+  margin-bottom: 150px;
 }
 
 .list {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 5%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 5%;
 }
 
 .title {
-    font-family: var(--font-bitter);
-    font-weight: 700;
-    font-size: 1.5em;
-    margin-bottom: 20px;
+  font-family: var(--font-bitter);
+  font-weight: 700;
+  font-size: 1.5em;
+  margin-bottom: 20px;
+  border-bottom: 3px solid var(--white);
+  padding-bottom: 15px;
 }

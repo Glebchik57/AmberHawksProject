@@ -1,13 +1,19 @@
 .btn {
   display: inline-flex;
-  width: 360px;
+  width: max-content;
   height: 70px;
   padding: 20px 49px;
   justify-content: center;
   align-items: center;
-  background: #f9581c;
-  color: white;
+  background: var(--orange);
+  color: var(--white);
   font-size: 20px;
   font-weight: 500;
-  line-height: 25px; 
+  line-height: 25px;
+  transition: background 1s;
+}
+
+.btn:hover {
+  background: var(--dark-orange);
+  transition: all 1s;
 }

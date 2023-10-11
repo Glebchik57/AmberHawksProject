@@ -2,11 +2,12 @@
   width: 360px;
   height: 505px;
   margin-top: 40px;
+  cursor: pointer;
 }
 
 .data {
   padding: 5px 20px;
-  color: var(--3, #000);
+  color: var(--black);
   font-family: Helvetica;
   font-size: 16px;
   font-weight: 300;
@@ -15,8 +16,8 @@
 }
 
 .title {
-  color: var(--2, #fff);
-  font-family: Bitter;
+  color: var(--white);
+  font-family: var(--font-bitter);
   font-size: 25px;
   font-weight: 600;
   line-height: 120%; /* 30px */
@@ -26,7 +27,7 @@
 }
 
 .text {
-  color: var(--2, #fff);
+  color: var(--white);
   font-family: HelveticaNeueCyr;
   font-size: 18px;
   font-weight: 300;

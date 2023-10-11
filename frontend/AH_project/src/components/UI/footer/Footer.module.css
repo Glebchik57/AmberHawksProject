@@ -1,39 +1,56 @@
 .container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding-top: 100px;
-    background: url('../../../assets/img/logo.png') no-repeat 0% 10%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 100px;
+  background: url('../../../assets/img/logo.png') no-repeat 0% 10%;
 }
 
 .footer {
-    border-top: 1px solid white;
-    padding: 0px 0px 20px 0px;
+  border-top: 1px solid white;
+  padding: 0px 0px 20px 0px;
 }
 
 .contacts {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
 
 .social {
-    display: flex;
-    gap: 30px;
+  display: flex;
+  gap: 30px;
 }
 
 .list {
-    display: flex;
-    gap: 30px;
+  display: flex;
+  gap: 30px;
 }
 
 .folow {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .text {
-    color: white;
+  color: white;
+}
+
+.vk {
+  background-color: var(--white);
+  width: 30px;
+  height: 30px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.youtube {
+  cursor: pointer;
+}
+
+.vk:hover {
+  background-color: var(--dark-orange);
+  transition: all 1s;
 }

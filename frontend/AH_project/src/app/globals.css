@@ -1,3 +1,12 @@
+:root {
+  --basic: #141414;
+  --black: #000000;
+  --orange: #f77f52;
+  --white: #ffffff;
+
+  --dark-orange: #f9581c;
+}
+
 /* Reset and base styles  */
 
 * {
@@ -22,11 +31,12 @@ a:visited {
 
 a:hover {
   text-decoration: none;
-  color: #f9581c;
+  color: var(--dark-orange);
+  transition: color 1s;
 }
 
 a {
-  color: white;
+  color: var(--white);
 }
 
 /* Common */
@@ -72,7 +82,6 @@ address {
 
 /* Form */
 
-input,
 textarea,
 button,
 select {
@@ -87,7 +96,7 @@ input::-ms-clear {
 }
 
 button,
-input[type="submit"] {
+input[type='submit'] {
   display: inline-block;
   box-shadow: none;
   background-color: transparent;
@@ -121,7 +130,7 @@ body {
   margin: 0 auto;
   height: 100vh;
   background-size: 100%;
-  background-color: black;
+  background-color: var(--basic);
 }
 
 .container {

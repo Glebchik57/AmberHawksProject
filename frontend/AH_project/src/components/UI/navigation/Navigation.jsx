@@ -1,5 +1,7 @@
 import Link from 'next/link';
 import styles from './Navigation.module.css';
+import Vk from '../iconsComponents/Vk';
+import Youtube from '../iconsComponents/Youtube';
 
 
 export default function Navigation() {
@@ -12,7 +14,17 @@ export default function Navigation() {
             <ul className={styles.header__nav}>
               <li>
                 <Link className={styles.header__text} href='/about'>
-                  О федерации
+                  Федерация
+                </Link>
+              </li>
+              <li>
+                <Link className={styles.header__text} href='/news'>
+                  Новости и события
+                </Link>
+              </li>
+              <li>
+                <Link className={styles.header__text} href='/news'>
+                  Игры
                 </Link>
               </li>
               <li>
@@ -21,21 +33,29 @@ export default function Navigation() {
                 </Link>
               </li>
               <li>
-                <a className={styles.header__text} href='#'>
+                <a className={styles.header__text} href='/flag'>
                   Флаг футбол
                 </a>
               </li>
               <li>
                 <Link className={styles.header__text} href='/kids'>
-                  Детская команда
+                  Дети
                 </Link>
               </li>
             </ul>
           </nav>
         </div>
         <div className={styles.header__icons}>
-          <div className={styles.vk}></div>
-          <div className={styles.youtube}></div>
+          <div className={styles.vk}>
+            <Link href={'https://vk.com/afkld'}>
+              <Vk />
+            </Link>
+          </div>
+          <div className={styles.youtube}>
+            <Link href={'https://www.youtube.com/channel/UCT6OZJVJK7ximMVnvt9wZKw'}>
+              <Youtube />
+            </Link>
+          </div>
         </div>
       </div>
     </div>

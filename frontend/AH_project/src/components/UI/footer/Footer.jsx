@@ -1,5 +1,7 @@
 import styles from './Footer.module.css';
 import Link from 'next/link';
+import Vk from '../iconsComponents/Vk';
+import Youtube from '../iconsComponents/Youtube';
 import Button from '../button/Button';
 
 export default function Footer() {
@@ -13,16 +15,26 @@ export default function Footer() {
                         <div><Link href={'mailto:example@email.com'}>example@email.com</Link></div>
                     </div>
                     <div className={styles.social}>
-                        <div><Link href={'https://vk.com/afkld'}>Вконтакте</Link></div>
-                        <div><Link href={'https://www.youtube.com/channel/UCT6OZJVJK7ximMVnvt9wZKw'}>Youtube</Link></div>
+                        <div className={styles.vk}><Link href={'https://vk.com/afkld'}><Vk /></Link></div>
+                        <div className={styles.youtube}><Link href={'https://www.youtube.com/channel/UCT6OZJVJK7ximMVnvt9wZKw'}><Youtube /></Link></div>
                     </div>
                 </div>
                 <nav>
                     <ul className={styles.list}>
                         <li>
-                            <a href='#'>
-                                О федерации
-                            </a>
+                            <Link href='/about'>
+                                Федерация
+                            </Link>
+                        </li>
+                        <li>
+                            <Link href='/news'>
+                                Новости и события
+                            </Link>
+                        </li>
+                        <li>
+                            <Link href='/news'>
+                                Игры
+                            </Link>
                         </li>
                         <li>
                             <Link href='/team'>
@@ -30,14 +42,14 @@ export default function Footer() {
                             </Link>
                         </li>
                         <li>
-                            <a href='#'>
+                            <Link href='/flag'>
                                 Флаг футбол
-                            </a>
+                            </Link>
                         </li>
                         <li>
-                            <a href='#'>
-                                Детская команда
-                            </a>
+                            <Link href='/kids'>
+                                Дети
+                            </Link>
                         </li>
                     </ul>
                 </nav>

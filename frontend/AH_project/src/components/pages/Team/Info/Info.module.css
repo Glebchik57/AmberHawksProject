@@ -1,19 +1,19 @@
 .wrapper {
-    margin-top: 30px;
-    color: white;
-    margin-bottom: 150px;
+  color: var(--white);
+  margin-bottom: 90px;
 }
 
 .title {
-    font-family: var(--font-bitter);
-    font-weight: 700;
-    font-size: 2.5em;
-    margin: 40px 0 30px;
+  font-family: var(--font-bitter);
+  font-weight: 700;
+  font-size: 2.5em;
+  margin: 40px 0 30px;
+  border-bottom: 3px solid var(--white);
 }
 
 .text {
-    font-family: var(--font-helvetica);
-    font-weight: 500;
-    width: 60%;
-    margin-bottom: 20px;
+  font-family: var(--font-helvetica);
+  font-weight: 500;
+  width: 60%;
+  margin-bottom: 20px;
 }
