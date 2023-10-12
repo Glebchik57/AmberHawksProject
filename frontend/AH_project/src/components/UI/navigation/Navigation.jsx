@@ -1,10 +1,43 @@
+'use client'
+
 import Link from 'next/link';
 import styles from './Navigation.module.css';
 import Vk from '../iconsComponents/Vk';
 import Youtube from '../iconsComponents/Youtube';
+import { usePathname } from 'next/navigation';
 
 
 export default function Navigation() {
+  const pathname = usePathname();
+
+  const navLink = [
+    {
+      name: 'Федерация',
+      link: '/about'
+    },
+    {
+      name: 'Новости и события',
+      link: '/news'
+    },
+    {
+      name: 'Игры',
+      link: '/games'
+    },
+    {
+      name: 'Янтарные ястребы',
+      link: '/team'
+    },
+    {
+      name: 'Флаг футбол',
+      link: '/flag'
+    },
+    {
+      name: 'Дети',
+      link: '/kids'
+    },
+  ]
+
+
   return (
     <div className={styles.header}>
       <div className={styles.container}>
@@ -12,36 +45,13 @@ export default function Navigation() {
         <div>
           <nav>
             <ul className={styles.header__nav}>
-              <li>
-                <Link className={styles.header__text} href='/about'>
-                  Федерация
-                </Link>
-              </li>
-              <li>
-                <Link className={styles.header__text} href='/news'>
-                  Новости и события
-                </Link>
-              </li>
-              <li>
-                <Link className={styles.header__text} href='/news'>
-                  Игры
-                </Link>
-              </li>
-              <li>
-                <Link className={styles.header__text} href='/team'>
-                  Янтарные ястребы
-                </Link>
-              </li>
-              <li>
-                <a className={styles.header__text} href='/flag'>
-                  Флаг футбол
-                </a>
-              </li>
-              <li>
-                <Link className={styles.header__text} href='/kids'>
-                  Дети
-                </Link>
-              </li>
+              {navLink.map(({ link, name }) => (
+                <li key={name}>
+                  <Link className={`${styles.header__text} ${pathname == link ? styles.active : ''}`} href={link}>
+                    {name}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </nav>
         </div>

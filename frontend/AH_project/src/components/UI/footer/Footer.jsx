@@ -32,7 +32,7 @@ export default function Footer() {
                             </Link>
                         </li>
                         <li>
-                            <Link href='/news'>
+                            <Link href='/games'>
                                 Игры
                             </Link>
                         </li>
