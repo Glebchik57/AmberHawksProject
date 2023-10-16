@@ -10,7 +10,7 @@ export default function Footer() {
             <div className={styles.container}>
                 <div className={styles.contacts}>
                     <div>
-                        <div><Link href={'https://yandex.ru/maps/-/CDUUIWmN'}>улица Согласия, 39, Калининград</Link></div>
+                        <div><Link href={'https://yandex.ru/maps/-/CDUUIWmN'}>улица Согласия, 41, Калининград</Link></div>
                         <div><Link href={'tel:+74012346578'}>+7 (4012) 346-578</Link></div>
                         <div><Link href={'mailto:example@email.com'}>example@email.com</Link></div>
                     </div>

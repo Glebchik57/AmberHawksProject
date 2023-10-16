@@ -4,9 +4,9 @@ import styles from './TrainingSchedule.module.css'
 export default function TrainingSchedule() {
   return (
     <div>
-      <div className={styles.scheduleTitle}>Расписание тренировок</div>
+      <div className={styles.schedule__title}>Расписание тренировок</div>
       <div className={styles.schedule__list}>
-      <div className={styles.schedule__item}>
+        <div className={styles.schedule__item}>
           <span>Понедельник</span>
           <span>20:00</span>
           <span>Стадион &ldquo;Сельма&ldquo;</span>

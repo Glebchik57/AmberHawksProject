@@ -11,7 +11,7 @@ export default function Form() {
 
                     <div className={styles.checkbox_wrapper}>
                         <input className={styles.checkbox} type="checkbox" id="checkbox" />
-                        <label for="checkbox">Нажимая отправить я согласен с политикой обработки ПД</label>
+                        <label htmlFor="checkbox">Нажимая отправить я согласен с политикой обработки ПД</label>
                     </div>
 
                     <button className={styles.button} type="submit">Отправить заявку</button>

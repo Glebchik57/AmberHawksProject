@@ -1,3 +1,5 @@
+import teamMain from '../../assets/img/teamMain.png'
+
 export const IMAGES_COACH = ['/coach.png'];
 
 export const NAMES_COACH = [
@@ -52,24 +54,24 @@ export const RANK_PlAYER = [
 
 export const NEWS = [
   {
-    id:1,
+    id: 1,
     img: '/news.png',
-    data: '12 марта 2023',
+    data: '14 марта 2023',
     title: 'Открытая тренировка',
     text: '30 июня все желающие могут попробовать себя в нашем замечательном виде спорта!',
   },
   {
-    id:2,
+    id: 2,
     img: '/news.png',
-    data: '12 марта 2023',
-    title: 'Открытая тренировка',
+    data: '13 марта 2023',
+    title: 'Сегодня день рождения',
     text: '30 июня все желающие могут попробовать себя в нашем замечательном виде спорта!',
   },
   {
-    id:3,
-    img: '/news.png',
+    id: 3,
+    img: { ...teamMain },
     data: '12 марта 2023',
-    title: 'Открытая тренировка',
-    text: '30 июня все желающие могут попробовать себя в нашем замечательном виде спорта!',
+    title: 'Победа в последнем матче',
+    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
   },
 ];
