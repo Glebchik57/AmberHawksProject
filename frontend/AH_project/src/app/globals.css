@@ -3,6 +3,7 @@
   --black: #000000;
   --orange: #f77f52;
   --white: #ffffff;
+  --background: #313131;
 
   --dark-orange: #f9581c;
 }
@@ -125,12 +126,13 @@ legend {
 }
 
 body {
-  font-family: var(--font-monsterrat);
+  font-family: var(--font-inter);
+  font-size: 100%;
   width: 100%;
   margin: 0 auto;
   height: 100vh;
   background-size: 100%;
-  background-color: var(--basic);
+  background-color: var(--background);
 }
 
 .container {

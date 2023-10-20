@@ -1,0 +1,50 @@
+.about {
+  margin-top: 120px;
+}
+
+.about__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  border-bottom: 3px solid white;
+  padding-bottom: 13px;
+}
+
+.about__title {
+  color: var(--white);
+  font-size: 48px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.about__text {
+  display: flex;
+  flex-direction: column;
+  gap: 10%;
+  font-size: 18px;
+  color: var(--white);
+  grid-column-start: 5;
+  grid-column-end: 7;
+  justify-content: space-evenly;
+}
+
+.about__link {
+  color: var(--white);
+  transition: color 1s;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.about__content {
+  margin-top: 37px;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 4%;
+}
+
+.about__video {
+  grid-column-start: 1;
+  grid-column-end: 5;
+  height: 480px;
+}

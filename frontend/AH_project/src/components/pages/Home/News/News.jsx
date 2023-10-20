@@ -8,7 +8,7 @@ export default function News() {
   return (
     <div className={styles.news}>
       <div className={styles.news__header}>
-        <Link className={styles.news__title} href='news'>Новости</Link>
+        <Link className={styles.news__title} href='news'>Актуальное</Link>
         <Link className={styles.news__button} href='news'>Все новости &#8599;</Link>
       </div>
       <div className={styles.news__list}>

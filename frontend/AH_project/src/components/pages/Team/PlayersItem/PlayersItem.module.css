@@ -1,20 +1,19 @@
 .item {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .name {
-    border-bottom: 1px solid white;
-    padding-bottom: 10px;
-    margin-top: 10px;
-    font-weight: 700;
-    font-size: 1.2em;
+  border-bottom: 1px solid white;
+  padding-bottom: 10px;
+  margin-top: 10px;
+  font-weight: 700;
+  font-size: 1.2em;
 }
 
 .info {
-    font-family: var(--font-helvetica);
-    display: flex;
-    flex-direction: column;
-    gap: 3px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
 }

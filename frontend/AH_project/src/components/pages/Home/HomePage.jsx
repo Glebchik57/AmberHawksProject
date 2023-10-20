@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './Home.module.css';
 import Button from './../../UI/button/Button.jsx';
-import News from './News/News';
+
 
 
 export default function Home() {

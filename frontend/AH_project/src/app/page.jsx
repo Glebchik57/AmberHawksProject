@@ -3,9 +3,8 @@ import styles from './page.module.css'
 import Navigation from '@/components/UI/navigation/Navigation';
 import HomePage from '@/components/pages/Home/HomePage';
 import News from '@/components/pages/Home/News/News';
-import TrainingSchedule from '@/components/pages/Home/trainingSchedule/TrainingSchedule';
 import Form from '@/components/UI/form/Form';
-import Place from '@/components/pages/Home/Place/Place';
+import AboutTeam from '@/components/pages/Home/AboutTeam/AboutTeam';
 
 export default async function Home() {
   return (
@@ -21,13 +20,8 @@ export default async function Home() {
       <div className={styles.container}>
         <News />
       </div>
-      <div className={styles.backgoundSchedule}>
-        <div className={styles.container}>
-          <TrainingSchedule />
-        </div>
-      </div>
       <div className={styles.container}>
-        <Place />
+        <AboutTeam />
       </div>
       <div className={styles.container}>
         <Form />

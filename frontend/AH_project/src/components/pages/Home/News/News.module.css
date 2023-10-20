@@ -6,17 +6,16 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  border-bottom: 2px solid white;
-  padding-bottom: 20px;
+  border-bottom: 3px solid white;
+  padding-bottom: 13px;
 }
 
 .news__title {
   color: var(--white);
-  font-family: Bitter;
-  font-size: 40px;
-  font-weight: 600;
-  line-height: 120%; /* 48px */
+  font-size: 48px;
+  font-weight: 700;
   text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .news__list {
@@ -28,8 +27,9 @@
 
 .news__button {
   color: var(--white);
-  font-family: Bitter;
   transition: color 1s;
+  font-size: 18px;
+  font-weight: 600;
 }
 
 .news__button:hover {
