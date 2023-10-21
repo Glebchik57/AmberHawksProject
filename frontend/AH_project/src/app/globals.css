@@ -4,6 +4,7 @@
   --orange: #f77f52;
   --white: #ffffff;
   --background: #313131;
+  --dark-text: #222222;
 
   --dark-orange: #f9581c;
 }
@@ -133,6 +134,7 @@ body {
   height: 100vh;
   background-size: 100%;
   background-color: var(--background);
+  color: var(--white);
 }
 
 .container {
