@@ -1,3 +1,5 @@
+import datetime
+
 from rest_framework import serializers
 from drf_extra_fields.fields import Base64ImageField
 
@@ -30,6 +32,9 @@ class NewsSerializer(serializers.ModelSerializer):
             'image',
             'pub_date',
         )
+
+    def get_pub_date(self, obj):
+        return datetime.date.today()
 
 
 class GameSerializer(serializers.ModelSerializer):

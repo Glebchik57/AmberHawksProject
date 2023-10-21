@@ -1,6 +1,11 @@
+import os
+
 from django.contrib import admin
+from django.utils.safestring import mark_safe
+
 
 from .models import Events, News, Games
+
 
 
 class EventsAdmin(admin.ModelAdmin):
@@ -12,6 +17,8 @@ class NewsAdmin(admin.ModelAdmin):
     list_display = ('title', 'text', 'image',)
     search_fields = ('title',)
     list_filter = ('pub_date',)
+
+    
 
 
 class GamesAdmin(admin.ModelAdmin):

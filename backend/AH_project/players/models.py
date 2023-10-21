@@ -26,7 +26,7 @@ class Players(models.Model):
     first_name = models.CharField('Имя', max_length=50)
     last_name = models.CharField('Имя', max_length=50)
     photo = models.ImageField(blank=True, null=True)
-    age = models.PositiveIntegerField()
+    age = models.PositiveIntegerField(blank=True, null=True)
     bday = models.DateField()
     number = models.PositiveIntegerField(
         unique=True
