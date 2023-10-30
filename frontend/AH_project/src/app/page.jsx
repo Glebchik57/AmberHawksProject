@@ -8,6 +8,8 @@ import AboutTeam from '@/components/pages/Home/AboutTeam/AboutTeam';
 import Table from '@/components/pages/Home/Table/Table';
 
 export default async function Home() {
+  const imageForm = '/player_form.png'
+
   return (
     <>
       <div className={styles.wrapper}>
@@ -28,7 +30,7 @@ export default async function Home() {
         <Table />
       </div>
       <div className={styles.container}>
-        <Form />
+        <Form img={imageForm} />
       </div>
       <Footer />
     </>

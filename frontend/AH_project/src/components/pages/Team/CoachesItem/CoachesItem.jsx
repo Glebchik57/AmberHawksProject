@@ -7,8 +7,8 @@ function CoachesItem({ coach }) {
             <Image
                 src={coach.image}
                 alt='coach'
-                width={262}
-                height={245}
+                width={360}
+                height={480}
             />
             <h3 className={styles.name}>{coach.name}</h3>
             <p className={styles.position}>{coach.position}</p>

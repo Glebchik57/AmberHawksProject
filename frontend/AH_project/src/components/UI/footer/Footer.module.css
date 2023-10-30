@@ -1,57 +1,51 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px 0px 24px;
+  border-bottom: 1px solid var(--white);
+}
+
 .container {
   display: flex;
   align-items: center;
   justify-content: space-between;
   max-width: 1200px;
   margin: 0 auto;
-  padding-top: 100px;
-  background: url('../../../assets/img/logo.png') no-repeat 0% 10%;
+  padding: 30px 0px 24px;
 }
 
 .footer {
-  border-top: 1px solid white;
   padding: 0px 0px 20px 0px;
   background-color: var(--basic);
 }
 
-.contacts {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
+.phoneLink {
+  color: var(--white);
+  font-weight: 700;
+  font-size: 24px;
+}
+
+.phoneText {
+  font-size: 12px;
 }
 
 .social {
   display: flex;
-  gap: 30px;
+  gap: 10px;
 }
 
-.list {
-  display: flex;
-  gap: 30px;
+.agreements {
+  display: inline-flex;
+  gap: 10px;
+  font-weight: 600;
+  font-size: 12px;
 }
 
-.folow {
-  display: flex;
-  flex-direction: column;
-}
-
-.text {
-  color: white;
-}
-
-.vk {
-  background-color: var(--white);
-  width: 30px;
-  height: 30px;
-  border-radius: 10px;
-  cursor: pointer;
-}
-
-.youtube {
-  cursor: pointer;
-}
-
-.vk:hover {
-  background-color: var(--dark-orange);
-  transition: all 1s;
+.cookie {
+  width: 55%;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.6);
 }

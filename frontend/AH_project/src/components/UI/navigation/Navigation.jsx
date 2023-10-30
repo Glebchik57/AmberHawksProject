@@ -55,18 +55,6 @@ export default function Navigation() {
             </ul>
           </nav>
         </div>
-        <div className={styles.header__icons}>
-          <div className={styles.vk}>
-            <Link href={'https://vk.com/afkld'}>
-              <Vk />
-            </Link>
-          </div>
-          <div className={styles.youtube}>
-            <Link href={'https://www.youtube.com/channel/UCT6OZJVJK7ximMVnvt9wZKw'}>
-              <Youtube />
-            </Link>
-          </div>
-        </div>
       </div>
     </div>
   );

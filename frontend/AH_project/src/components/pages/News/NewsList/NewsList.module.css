@@ -1,0 +1,31 @@
+.wrapper {
+  color: white;
+  margin-bottom: 150px;
+}
+
+.list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 5%;
+}
+
+.title {
+  display: none;
+}
+
+.toggles {
+  display: flex;
+  gap: 10px;
+}
+
+.toggle {
+  text-transform: uppercase;
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.toggle_active {
+  color: var(--orange);
+  border-bottom: 2px solid var(--orange);
+}

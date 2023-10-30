@@ -8,6 +8,7 @@
   font-size: 2.5em;
   margin: 40px 0 30px;
   border-bottom: 3px solid var(--white);
+  text-transform: uppercase;
 }
 
 .text {

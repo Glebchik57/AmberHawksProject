@@ -1,0 +1,8 @@
+.svg_fill {
+  fill: var(--white);
+}
+
+.svg:hover .svg_fill {
+  fill: var(--dark-orange);
+  transition: all 1s;
+}

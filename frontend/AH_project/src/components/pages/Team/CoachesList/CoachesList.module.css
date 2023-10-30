@@ -5,7 +5,7 @@
 
 .list {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   grid-gap: 5%;
 }
 
@@ -15,4 +15,5 @@
   margin-bottom: 20px;
   border-bottom: 3px solid var(--white);
   padding-bottom: 15px;
+  text-transform: uppercase;
 }

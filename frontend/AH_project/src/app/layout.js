@@ -23,6 +23,11 @@ const inter = localFont({
       weight: '600',
       style: 'normal',
     },
+    {
+      path: '../assets/fonts/Inter-Black.woff2',
+      weight: '900',
+      style: 'normal',
+    },
   ],
   variable: '--font-inter'
 })
