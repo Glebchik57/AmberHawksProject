@@ -1,0 +1,23 @@
+.item {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.name {
+  padding-bottom: 10px;
+  margin-top: 10px;
+  font-weight: 700;
+  font-size: 1.2em;
+  text-transform: uppercase;
+}
+
+.img {
+  width: '100%';
+  height: 'auto';
+}
+
+.title {
+  font-size: 24px;
+  font-weight: 700;
+}

@@ -1,6 +1,6 @@
 import styles from './NewsList.module.css'
-import { coachesList } from "@/mock/team/mock"
-import CoachesItem from "../CoachesItem/CoachesItem"
+import NewsItem from "../NewsItem/NewsItem"
+import { NEWS } from '@/mock/team/const'
 
 function NewsList() {
     return (
@@ -11,10 +11,11 @@ function NewsList() {
                 <button className={styles.toggle}>События</button>
             </div>
             <ul className={styles.list}>
-                {coachesList.map((coach) => (
-                    <CoachesItem
-                        key={coach.id}
-                        coach={coach}
+                {console.log(NEWS)}
+                {NEWS.map((item) => (
+                    <NewsItem
+                        key={item.id}
+                        item={item}
                     />
                 ))}
             </ul>

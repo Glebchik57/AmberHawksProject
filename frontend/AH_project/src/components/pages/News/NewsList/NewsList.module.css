@@ -4,9 +4,9 @@
 }
 
 .list {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 5%;
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
 }
 
 .title {
