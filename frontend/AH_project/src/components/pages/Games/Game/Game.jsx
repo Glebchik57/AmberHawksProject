@@ -4,15 +4,15 @@ function Game({ item }) {
 
     return (
         <li className={styles.item}>
-            <div>
-                <span>Янтарные ястребы</span>
-                <span>{item.points}</span>
+            <div className={styles.vs}>
+                <span className={styles.name}>Янтарные ястребы</span>
+                <span className={styles.points}>{item.points}</span>
                 :
-                <span>{item.points_}</span>
-                <span>{item.team}</span>
+                <span className={styles.points}>{item.points_}</span>
+                <span className={styles.name}>{item.team}</span>
             </div>
-            <div>{item.date}</div>
-            <div>{item.place}</div>
+            <div className={styles.date}>{item.date}</div>
+            <div className={styles.place}>{item.place}</div>
         </li>
     )
 }

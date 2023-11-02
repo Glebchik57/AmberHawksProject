@@ -11,7 +11,6 @@ function NewsList() {
                 <button className={styles.toggle}>События</button>
             </div>
             <ul className={styles.list}>
-                {console.log(NEWS)}
                 {NEWS.map((item) => (
                     <NewsItem
                         key={item.id}
