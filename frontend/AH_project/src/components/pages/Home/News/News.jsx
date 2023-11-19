@@ -1,7 +1,7 @@
-import NewsCard from '@/components/UI/newsCard/NewsCard';
+import NewsCard from '../../../UI/newsCard/NewsCard';
 import React from 'react';
 import styles from './News.module.css'
-import { NEWS } from '@/mock/team/const';
+import { NEWS } from '../../../../mock/team/const';
 import Link from 'next/link';
 
 export default function News() {

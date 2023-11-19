@@ -1,5 +1,5 @@
 import styles from './CoachesList.module.css'
-import { coachesList } from "@/mock/team/mock"
+import { coachesList } from "../../../../mock/team/mock"
 import CoachesItem from "../CoachesItem/CoachesItem"
 
 function CoachesList() {

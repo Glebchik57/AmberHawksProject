@@ -1,6 +1,6 @@
 import styles from './NewsList.module.css'
 import NewsItem from "../NewsItem/NewsItem"
-import { NEWS } from '@/mock/team/const'
+import { NEWS } from '../../../../mock/team/const'
 
 function NewsList() {
     return (

@@ -1,8 +1,8 @@
 import styles from './page.module.css'
-import Navigation from '@/components/UI/navigation/Navigation';
-import Footer from "@/components/UI/footer/Footer";
-import Form from '@/components/UI/form/Form';
-import Games from '@/components/pages/Games/Games';
+import Navigation from '../../components/UI/navigation/Navigation';
+import Footer from "../../components/UI/footer/Footer";
+import Form from '../../components/UI/form/Form';
+import GamesPage from '../../components/pages/GamesPage/GamesPage';
 
 
 export default async function Games() {
@@ -12,7 +12,7 @@ export default async function Games() {
             <Navigation />
             <div className={styles.container}>
                 <main>
-                    <Games />
+                    <GamesPage />
                     <div className={styles.container}>
                         <Form img={imageForm} />
                     </div>

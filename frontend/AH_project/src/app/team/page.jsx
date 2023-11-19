@@ -1,8 +1,8 @@
 import styles from './page.module.css'
-import TeamPage from "@/components/pages/Team/TeamPage";
-import Navigation from '@/components/UI/navigation/Navigation';
-import Footer from "@/components/UI/footer/Footer";
-import Form from '@/components/UI/form/Form';
+import TeamPage from "../../components/pages/Team/TeamPage";
+import Navigation from '../../components/UI/navigation/Navigation';
+import Footer from "../../components/UI/footer/Footer";
+import Form from '../../components/UI/form/Form';
 
 
 export default async function Team() {

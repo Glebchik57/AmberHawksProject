@@ -1,10 +1,10 @@
-import { GAMES } from '@/mock/team/const'
+import { GAMES } from '../../../mock/team/const'
 import styles from './Games.module.css'
 import Game from './Game/Game'
-import CoachesItem from '../Team/CoachesItem/CoachesItem'
-import { coachesList } from "@/mock/team/mock"
+// import CoachesItem from '../Team/CoachesItem/CoachesItem'
+// import { coachesList } from "@/mock/team/mock"
 
-function Games() {
+function GamesPage() {
 
     return (
         <div className={styles.wrapper}>
@@ -23,4 +23,4 @@ function Games() {
     )
 }
 
-export default Games
+export default GamesPage
