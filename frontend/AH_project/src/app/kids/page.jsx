@@ -5,7 +5,7 @@ import Form from '@/components/UI/form/Form';
 import KidsPage from '@/components/pages/Kids/KidsPage';
 
 
-export default async function Flag() {
+export default async function Kids() {
     const imageForm = '/kids_form.png'
     return (
         <>

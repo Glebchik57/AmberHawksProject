@@ -1,9 +1,12 @@
-.git 
+.git
 db.sqlite3
-.idea
-.vscode
-.env
+    .idea
+    .vscode
+    .env
 node_modules
-npm-debug.log
+npm - debug.log
 README.md
-.next
+    .next
+Dockerfile
+    .dockerignore
+docker

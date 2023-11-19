@@ -5,7 +5,7 @@ import Form from '@/components/UI/form/Form';
 import Games from '@/components/pages/Games/Games';
 
 
-export default async function Flag() {
+export default async function Games() {
     const imageForm = '/player_form.png'
     return (
         <>

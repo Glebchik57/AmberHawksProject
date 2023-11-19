@@ -4,7 +4,7 @@ import Footer from "@/components/UI/footer/Footer";
 import Form from '@/components/UI/form/Form';
 import FederationPage from '@/components/pages/Federation/FederationPage';
 
-export default async function Flag() {
+export default async function About() {
     const imageForm = '/player_form.png'
     return (
         <>

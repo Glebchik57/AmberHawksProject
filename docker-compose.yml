@@ -1,0 +1,63 @@
+version: '3.3'
+services:
+
+  db:
+    image: postgres:13.0-alpine
+    volumes:
+      - /var/lib/postgresql/data/
+    env_file:
+      - ./.env
+  backend:
+    image: glebchik57/ah_backend:v0.1
+    restart: always
+    volumes:
+      - static_value:/app/static/
+      - media_value:/app/media/
+    depends_on:
+      - db
+    env_file:
+      - ./.env
+    networks:
+      - my_network
+  frontend:
+    image: glebchik57/ah_frontend:v0.1
+    container_name: front
+    build:
+      context: ./frontend/AH_project
+      dockerfile: Dockerfile
+      args:
+        ENV_VARIABLE: ${ENV_VARIABLE}
+        NEXT_PUBLIC_ENV_VARIABLE: ${NEXT_PUBLIC_ENV_VARIABLE}
+    restart: always
+    ports:
+      - 3000:3000
+    networks:
+      - my_network
+
+    volumes:
+      - ../frontend/:/app/result_build/
+    depends_on:
+      - backend
+  nginx:
+    image: glebchik57/ah_getaway:v0.1
+    ports:
+      - "8000:80"
+    networks:
+      - my_network
+    volumes:
+      - ../frontend/build:/usr/share/nginx/html/
+      - ../docs/:/usr/share/nginx/html/api/docs/
+      - media_value:/var/html/media/
+      - static_value:/var/html/static/
+    depends_on:
+      - backend
+      - frontend
+
+
+volumes:
+  media_value:
+  static_value:
+
+networks:
+  my_network:
+    external: true
