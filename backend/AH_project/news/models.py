@@ -26,11 +26,16 @@ class News(models.Model):
     image = models.ImageField(blank=True, null=True)
     pub_date = models.DateTimeField(auto_now_add=True)
 
-    
     def __str__(self):
         return f'{self.title}'
 
     class Meta:
+        constraints = [
+            models.UniqueConstraint(
+                fields=['title', 'text'],
+                name='unique_news'
+            )
+        ]
         ordering = ['pub_date']
         verbose_name = 'Новость'
         verbose_name_plural = 'Новости'

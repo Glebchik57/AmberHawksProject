@@ -24,7 +24,7 @@ TEAM_CHOICES = (
 
 class Players(models.Model):
     first_name = models.CharField('Имя', max_length=50)
-    last_name = models.CharField('Имя', max_length=50)
+    last_name = models.CharField('Фамилия', max_length=50)
     photo = models.ImageField(blank=True, null=True)
     age = models.PositiveIntegerField(blank=True, null=True)
     bday = models.DateField()
@@ -38,6 +38,12 @@ class Players(models.Model):
         return f'{self.position}: {self.first_name} {self.last_name}({self.number})'
 
     class Meta:
+        constraints = [
+            models.UniqueConstraint(
+                fields=['first_name', 'last_name', 'number', 'team'],
+                name='unique_player'
+            )
+        ]
         ordering = ['number']
         verbose_name = 'Игрок'
         verbose_name_plural = 'Игроки'

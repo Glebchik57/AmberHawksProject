@@ -35,6 +35,7 @@ python-telegram-bot = "13.7"
 gunicorn = "20.1.0"
 requests = "^2.31.0"
 python-dateutil = "^2.8.2"
+psycopg2-binary = "^2.9.9"
 
 [tool.poetry.group.dev.dependencies]
 ruff = "^0.0.291"

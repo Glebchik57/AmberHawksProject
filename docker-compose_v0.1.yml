@@ -35,8 +35,18 @@ services:
     depends_on:
       - backend
       - frontend
+  parcer:
+    image: 
+    restart: always
+    env_file:
+      - ./.env
+    depends_on:
+      - backend
+    volumes:
+      - parcer_logs:/app/logs/
 
 
 volumes:
   media_value:
   static_value:
+  parcer_logs:
