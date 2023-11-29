@@ -5,12 +5,12 @@ function PlayersItem({ player }) {
     return (
         <li className={styles.item}>
             <Image
-                src={player.image}
+                src={player.photo}
                 alt='player'
                 width={360}
                 height={480}
             />
-            <h3 className={styles.name}>{player.name}</h3>
+            <h3 className={styles.name}>{player.first_name}</h3>
             <p>{player.position}</p>
 
         </li>

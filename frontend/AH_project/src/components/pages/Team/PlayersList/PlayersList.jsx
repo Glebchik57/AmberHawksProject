@@ -1,8 +1,10 @@
 import styles from './PlayersList.module.css'
-import { playersList } from "../../../../mock/team/mock"
+// import { playersList } from "../../../../mock/team/mock"
 import PlayersItem from "../PlayersItem/PlayersItem"
+import { getPlayers } from '../../../../api/api'
 
-function PlayersList() {
+async function PlayersList() {
+    const players = await getPlayers();
     return (
         <div className={styles.wrapper}>
             <h2 className={styles.title}>Игроки</h2>
@@ -11,9 +13,9 @@ function PlayersList() {
                 <button className={styles.toggle}>Защита</button>
             </div>
             <ul className={styles.list}>
-                {playersList.map((player) => (
+                {players.map((player) => (
                     <PlayersItem
-                        key={player.id}
+                        key={player.first_name}
                         player={player}
                     />
                 ))}
