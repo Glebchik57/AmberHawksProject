@@ -30,6 +30,10 @@ export default function Navigation() {
       link: '/flag'
     },
     {
+      name: 'Женщины',
+      link: '/women'
+    },
+    {
       name: 'Дети',
       link: '/kids'
     },

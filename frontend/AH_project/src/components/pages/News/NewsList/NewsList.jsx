@@ -1,8 +1,12 @@
 import styles from './NewsList.module.css'
 import NewsItem from "../NewsItem/NewsItem"
-import { NEWS } from '../../../../mock/team/const'
+import { getEvents } from '../../../../api/api';
+// import { NEWS } from '../../../../mock/team/const'
 
-function NewsList() {
+
+async function NewsList() {
+    const events = await getEvents();
+    console.log(events)
     return (
         <div className={styles.wrapper}>
             <h2 className={styles.title}>Новости и события</h2>
@@ -11,10 +15,10 @@ function NewsList() {
                 <button className={styles.toggle}>События</button>
             </div>
             <ul className={styles.list}>
-                {NEWS.map((item) => (
+                {events.map((event) => (
                     <NewsItem
-                        key={item.id}
-                        item={item}
+                        key={event.title}
+                        events={event}
                     />
                 ))}
             </ul>

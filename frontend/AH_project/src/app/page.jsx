@@ -7,14 +7,6 @@ import Form from '../components/UI/form/Form';
 import AboutTeam from '../components/pages/Home/AboutTeam/AboutTeam';
 import Table from '../components/pages/Home/Table/Table';
 
-// async function getPlayers() {
-//   const res = await fetch('https://amfoot39.ru/api/players')
-//   if (!res.ok) {
-//     console.log('Failed to fetch data')
-//   }
-//   const data = await res.json();
-//   return data;
-// }
 
 async function getDocuments() {
   const res = await fetch('https://amfoot39.ru/api/documents')

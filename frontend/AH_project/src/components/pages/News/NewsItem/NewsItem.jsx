@@ -1,19 +1,28 @@
 import styles from './NewsItem.module.css'
 import Image from 'next/image';
 
-function NewsItem({ item }) {
+function NewsItem({ events }) {
     return (
         <li className={styles.item}>
-            <Image className={styles.img}
-                width={1200}
-                height={440}
-                src={item.img}
-                alt='photo'
-            />
-            <span>{item.data}</span>
-            <h2 className={styles.title}>{item.title}</h2>
+            {(events.image) ?
+                <Image className={styles.img}
+                    width={1200}
+                    height={440}
+                    src={events.image}
+                    alt='photo'
+                />
+                :
+                <Image className={styles.img}
+                    width={1200}
+                    height={440}
+                    src='/amber.jpg'
+                    alt='photo'
+                />
+            }
+            <span>{events.date}</span>
+            <h2 className={styles.title}>{events.title}</h2>
             <p className={styles.text}>
-                {item.text}
+                {events.text}
             </p>
         </li>
     )
