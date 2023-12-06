@@ -15,7 +15,7 @@ SECRET_KEY = 'django-insecure-*x-i-cdb2c%8b9avr4*o88ysl=)5jsd#!ub0j$7^1)_s!grr09
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['amfoot39.ru']
+ALLOWED_HOSTS = ['amfoot39.ru', '127.0.0.1']
 
 
 
@@ -30,6 +30,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'drf_spectacular',
     'rest_framework',
+    'django_filters',
     'rest_framework.authtoken',
     'corsheaders',
 
@@ -37,6 +38,7 @@ INSTALLED_APPS = [
     'documents.apps.DocumentsConfig',
     'news.apps.NewsConfig',
     'players.apps.PlayersConfig',
+    'teams.apps.TeamsConfig',
     'phonenumber_field',
 ]
 
@@ -79,7 +81,6 @@ WSGI_APPLICATION = 'AH_project.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
-
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',

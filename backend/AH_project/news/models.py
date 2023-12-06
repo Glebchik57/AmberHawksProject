@@ -2,7 +2,8 @@ import os
 
 from django.db import models
 
-from players.models import Players
+from teams.models import Teams
+from .validators import validate_colon
 
 
 class Events(models.Model):
@@ -42,15 +43,31 @@ class News(models.Model):
 
 
 class Games(models.Model):
-    title = models.CharField(max_length=200)
-    text = models.TextField()
-    image = models.ImageField(blank=True, null=True)
-    date = models.DateField()
-    depth_chart = models.ManyToManyField(
-        Players,
-        blank=True
+    team1 = models.ForeignKey(
+        Teams,
+        on_delete=models.CASCADE,
+        blank=True,
+        null=True,
+        related_name='games_team1',
+        verbose_name='Хозяева'
     )
-    score = models.CharField(max_length=16, blank=True, null=True)
+    team2 = models.ForeignKey(
+        Teams,
+        on_delete=models.CASCADE,
+        blank=True,
+        null=True,
+        related_name='games_team2',
+        verbose_name='Гости'
+    )
+    adress = models.TextField(max_length=150)
+    date = models.DateField()
+    score = models.CharField(
+        max_length=16,
+        default='-:-',
+        blank=True,
+        null=True,
+        validators=[validate_colon],
+    )
 
     def __str__(self):
         return f'{self.title} {self.date}'

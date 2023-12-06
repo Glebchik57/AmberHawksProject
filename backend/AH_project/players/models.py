@@ -13,12 +13,18 @@ POSITION_CHOICES = (
     ('LB', 'LB',),
     ('CB', 'CB',),
     ('S', 'S',),
+    ('Couch', 'Couch',),
 )
 TEAM_CHOICES = (
     ('Amber Hawks', 'Amber Hawks',),
     ('Amber Kids', 'Amber Kids',),
     ('Amber Knight', 'Amber Knight',),
     ('women ff team', 'women ff team',),
+)
+
+INSIDE_TEAM_CHOICES = (
+    ('defence', 'defence',),
+    ('offence', 'offence',),
 )
 
 
@@ -33,6 +39,11 @@ class Players(models.Model):
     )
     position = models.CharField(choices=POSITION_CHOICES, max_length=10)
     team = models.CharField(choices=TEAM_CHOICES, max_length=50)
+    inside_team = models.CharField(
+        choices=INSIDE_TEAM_CHOICES,
+        max_length=50, blank=True,
+        null=True
+    )
 
     def __str__(self):
         return f'{self.position}: {self.first_name} {self.last_name}({self.number})'

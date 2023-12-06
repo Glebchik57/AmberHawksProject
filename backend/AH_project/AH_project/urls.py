@@ -12,6 +12,7 @@ from documents.views import DocumentsViewSet
 from news.views import EventsViewSet, NewsViewSet, GamesViewSet
 from players.views import PlayersViewSet
 from contact_form.views import ContactCreate
+from teams.views import TeamsViewSet
 
 router = DefaultRouter()
 
@@ -21,6 +22,7 @@ router.register('news', NewsViewSet)
 router.register('games', GamesViewSet)
 router.register('players', PlayersViewSet)
 router.register('contacts', ContactCreate)
+router.register('teams', TeamsViewSet)
 
 
 urlpatterns = [
@@ -31,7 +33,7 @@ urlpatterns = [
         'docs/',
         TemplateView.as_view(
         template_name='swagger-ui.html',
-        extra_context={'schema_url':'openapi-schema'}
+        extra_context={'schema_url': 'openapi-schema'}
         ),
         name='swagger-ui'
     ),
