@@ -63,14 +63,14 @@ class Games(models.Model):
     date = models.DateField()
     score = models.CharField(
         max_length=16,
-        default='-:-',
+        default='- : -',
         blank=True,
         null=True,
         validators=[validate_colon],
     )
 
     def __str__(self):
-        return f'{self.title} {self.date}'
+        return f'{self.team1} VS {self.team2}'
 
     class Meta:
         ordering = ['date']

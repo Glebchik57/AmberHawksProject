@@ -25,8 +25,3 @@ class GamesViewSet(viewsets.ModelViewSet):
     queryset = Games.objects.all()
     serializer_class = GameSerializer
     permission_classes = (IsAuthenticatedOrReadOnly,)
-
-    def list(self, queryset):
-        next_games = Games.objects.filter(date__gte=datetime.datetime.today())
-        serializer = GameSerializer(next_games, many=True)
-        return Response(serializer.data)

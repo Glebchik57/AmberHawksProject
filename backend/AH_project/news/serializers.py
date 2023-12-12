@@ -46,16 +46,13 @@ class NewsSerializer(serializers.ModelSerializer):
 
 
 class GameSerializer(serializers.ModelSerializer):
-    image = Base64ImageField()
-    depth_chart = PlayerSerializer(many=True)
 
     class Meta:
         model = Games
         fields = (
-            'title',
-            'text',
-            'image',
+            'team1',
+            'team2',
+            'adress',
             'date',
-            'depth_chart',
             'score',
         )

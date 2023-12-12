@@ -28,6 +28,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'drf_yasg',
     'drf_spectacular',
     'rest_framework',
     'django_filters',
@@ -39,6 +40,7 @@ INSTALLED_APPS = [
     'news.apps.NewsConfig',
     'players.apps.PlayersConfig',
     'teams.apps.TeamsConfig',
+    'timetable.apps.TimetableConfig',
     'phonenumber_field',
 ]
 
@@ -91,7 +93,6 @@ DATABASES = {
         'PORT': os.getenv('DB_PORT', 5432)
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators

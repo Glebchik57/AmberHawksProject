@@ -6,7 +6,7 @@ class Teams(models.Model):
     label = models.ImageField(unique=True)
 
     def __str__(self):
-        return f'{self.first_name}'
+        return f'{self.name}'
 
     class Meta:
         ordering = ['name']
