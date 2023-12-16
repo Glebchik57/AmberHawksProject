@@ -1,0 +1,63 @@
+.header {
+  background: var(--black);
+}
+
+.logo {
+  content: '';
+  background: url('./../../../assets/img/logo.png') no-repeat center;
+  width: 80px;
+  height: 76px;
+}
+
+.header__nav {
+  display: flex;
+  gap: 35px;
+}
+
+.header__text {
+  color: var(--white);
+  font-size: 1.2rem;
+}
+
+.header__text:hover {
+  color: var(--white);
+  border-bottom: 4px solid var(--orange);
+}
+
+.header__icons {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.vk {
+  background-color: var(--white);
+  width: 30px;
+  height: 30px;
+  border-radius: 10px;
+  background-position: center;
+  cursor: pointer;
+}
+
+.youtube {
+  width: 30px;
+  height: 22px;
+  cursor: pointer;
+}
+
+.vk:hover {
+  background-color: var(--dark-orange);
+  transition: all 1s;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.active {
+  border-bottom: 4px solid var(--orange);
+}

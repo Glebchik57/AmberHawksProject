@@ -1,0 +1,27 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  color: var(--white);
+  margin-top: 222px;
+}
+
+.main__title {
+  font-size: 120px;
+  font-weight: 900;
+  line-height: 120%;
+  text-transform: uppercase;
+}
+
+.main__subtext {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 120%;
+  text-transform: uppercase;
+}
+
+.main__btn {
+  text-align: center;
+  margin-top: 50px;
+}

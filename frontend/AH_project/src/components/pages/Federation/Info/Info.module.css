@@ -1,0 +1,23 @@
+.wrapper {
+  color: var(--white);
+  margin-bottom: 90px;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 2.5em;
+  margin: 40px 0 30px;
+  border-bottom: 3px solid var(--white);
+  text-transform: uppercase;
+}
+
+.text {
+  font-weight: 500;
+  width: 60%;
+  margin-bottom: 20px;
+}
+
+.video {
+  margin: 150px auto;
+  height: 480px;
+}

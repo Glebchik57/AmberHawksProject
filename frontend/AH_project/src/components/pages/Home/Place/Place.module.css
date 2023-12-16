@@ -1,0 +1,14 @@
+.place__title {
+  color: var(--2, #fff);
+  font-family: Bitter;
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 120%; /* 48px */
+  padding: 20px 0px;
+  border-bottom: 2px solid white;
+  text-transform: uppercase;
+}
+
+.place__map {
+  margin-top: 40px;
+}

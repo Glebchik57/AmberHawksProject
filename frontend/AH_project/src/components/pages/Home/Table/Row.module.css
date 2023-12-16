@@ -1,0 +1,20 @@
+.row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 24px 120px;
+  font-size: 24px;
+  letter-spacing: 1px;
+  font-weight: 700;
+}
+
+.row:nth-child(even) {
+  background-color: var(--white);
+  color: var(--dark-text);
+}
+
+.row__description {
+  font-size: 18px;
+  letter-spacing: 0px;
+  font-weight: 400;
+  text-transform: capitalize;
+}

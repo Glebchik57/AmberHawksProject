@@ -1,0 +1,21 @@
+.btn {
+  display: inline-flex;
+  width: max-content;
+  height: 70px;
+  padding: 20px 49px;
+  justify-content: center;
+  align-items: center;
+  background: var(--orange);
+  color: var(--dark-text);
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 25px;
+  transition: background 1s;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: var(--dark-orange);
+  transition: all 1s;
+}

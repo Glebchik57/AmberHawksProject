@@ -1,0 +1,62 @@
+.wrapper {
+  color: var(--white);
+  max-width: 1200px;
+  margin: 0 auto;
+  background: url('../../../assets/img/form_dark.png') no-repeat right bottom,
+    url('../../../assets/img/form.png') no-repeat right bottom;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 2.5em;
+  margin: 40px 0 23px;
+  border-bottom: 3px solid var(--white);
+  padding-bottom: 15px;
+  text-transform: uppercase;
+}
+
+.input {
+  width: 100%;
+  background-color: white;
+  color: var(--black);
+  border-radius: 2px;
+  padding: 10px 20px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-right: 120px;
+  margin-top: 50px;
+}
+
+.checkbox_wrapper {
+  display: flex;
+  margin: 24px 0px 40px;
+}
+
+.checkbox {
+  background: grey;
+}
+
+.button {
+  width: 100%;
+  background-color: var(--background);
+  color: var(--white);
+  border: 2px solid var(--white);
+  border-radius: 2px;
+  padding: 10px 20px;
+  font-weight: 700;
+  transition: background-color 1s;
+}
+
+.button:hover {
+  background-color: var(--dark-orange);
+  transition: all 1s;
+}
+
+.formWrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
