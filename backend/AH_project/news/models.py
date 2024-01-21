@@ -1,13 +1,14 @@
 from django.db import models
 
-from players.models import Players
+from teams.models import Teams
+from .validators import validate_colon, validate_date
 
 
 class Events(models.Model):
     title = models.CharField(max_length=200)
     text = models.TextField()
     image = models.ImageField(blank=True, null=True)
-    date = models.DateField()
+    date = models.DateField(validators=[validate_date])
 
     def __str__(self):
         return f'{self.title}'
@@ -28,26 +29,46 @@ class News(models.Model):
         return f'{self.title}'
 
     class Meta:
+        constraints = [
+            models.UniqueConstraint(
+                fields=['title', 'text'],
+                name='unique_news'
+            )
+        ]
         ordering = ['pub_date']
         verbose_name = 'Новость'
         verbose_name_plural = 'Новости'
 
 
 class Games(models.Model):
-    title = models.CharField(max_length=200)
-    text = models.TextField()
-    image = models.ImageField(blank=True, null=True)
-    date = models.DateField()
-    depth_chart = models.ManyToManyField(
-        Players,
-        many=True,
+    team1 = models.ForeignKey(
+        Teams,
+        on_delete=models.DO_NOTHING,
         blank=True,
-        null=True
+        null=True,
+        related_name='games_team1',
+        verbose_name='Хозяева'
     )
-    score = models.CharField(max_length=16, blank=True, null=True)
+    team2 = models.ForeignKey(
+        Teams,
+        on_delete=models.DO_NOTHING,
+        blank=True,
+        null=True,
+        related_name='games_team2',
+        verbose_name='Гости'
+    )
+    adress = models.TextField(max_length=150)
+    date = models.DateField(validators=[validate_date])
+    score = models.CharField(
+        max_length=16,
+        default='- : -',
+        blank=True,
+        null=True,
+        validators=[validate_colon],
+    )
 
     def __str__(self):
-        return f'{self.title} {self.date}'
+        return f'{self.team1} VS {self.team2}'
 
     class Meta:
         ordering = ['date']

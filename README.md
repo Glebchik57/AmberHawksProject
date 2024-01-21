@@ -1,34 +1,83 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Amber Hawks site
+## Описание
+Проект разработан для Калининградской федерации американского футбола.
+Сайт позваляет:
+- размещать информацию о командах состоящих в федерации;
+- публиковать информацию о предстоящих событиях, играх и новостях;
+- публиковать актуальные составы команд;
+- публиковать актуальные документы;
+- размещать расписание тренировко;
+- оставлять заявки на запись на тренировку с автоматическим уведомлением администратора сайта.
 
-## Getting Started
-
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+Так же проект позволяет размещать новости из группы в VK на сайте в автоматическом режиме.
+## Стек технологий
+- Next.js
+- Python 3.11
+- Django 3.2
+- djangorestframework 3.13
+- PostgreSQL
+- Docker
+- Docker-compose
+- Nginx
+## Запуск проекта
+Установить Docker на свой сервер:
 ```
+sudo apt update
+sudo apt install curl
+curl -fSL https://get.docker.com -o get-docker.sh
+sudo sh ./get-docker.sh
+sudo apt-get install docker-compose-plugin
+```
+Создать файл *docker-compose.production.yml* и скопировать содержимое *docker-compose.production.yml* из репозитория:
+```
+sudo touch docker-compose.production.yml
+```
+Создать файл *.env* в директории с файлом *docker-compose.production.yml* :
+```
+sudo touch .env
+```
+В файле .env необходимо прописать следующие переменные:
+```
+SECRET_KEY - Секретный ключ проекта
+TG_TOKEN - Токен телеграм бота
+TG_ID - Телеграм ID администратора, куда будут приходить уведомления
+VK_TOKEN - Сервесный токен VK
+VK_VERSION - Версия VK
+GROUP_DOMAIN - Домен группы VK от куда будут парситься новости
+POSTGRES_USER - Пользователь БД
+POSTGRES_PASSWORD - Пароль БД
+POSTGRES_DB - Название БД
+DB_HOST - Хост БД
+DB_PORT - БД порт
+```
+Откоректировать конфиг nginx на сервере для передачи запросов в:
+```
+sudo nano /etc/nginx/sites-enabled/default
+```
+Должно быть так:
+```
+server {
+    server_name ваш домен;
+    client_max_body_size 100M;
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+    location / {
+        proxy_pass http://amfoot39.ru:8000;
+    }
+```
+Запустить *docker-compose.production.yml*  в режиме демона:
+```
+sudo docker compose -f docker-compose.production.yml up -d
+```
+Выполнить миграции и  соберать статику:
+```
+sudo docker compose -f docker-compose.production.yml exec backend python manage.py migrate
+sudo docker compose -f docker-compose.production.yml exec backend python manage.py collectstatic
+```
+## Авторы
+- Frontend - [ElizavetaBiryukova](https://github.com/ElizavetaBiryukova)
+- Backend - [Jaroslav2001](https://github.com/Jaroslav2001), [Sevostyanov Gleb](https://github.com/Glebchik57)
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+**Содержание**
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+[TOC]
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.

@@ -1,0 +1,57 @@
+version: '3.3'
+services:
+
+  db:
+    image: postgres:13.0-alpine      
+    volumes:
+      - /var/lib/postgresql/data/    
+    env_file:
+      - ./.env
+  backend:
+    image: glebchik57/ah_backend:v0.2
+    restart: always
+    volumes:
+      - static_value:/app/static/    
+      - media_value:/app/media/        
+    depends_on:
+      - db
+    env_file:
+      - ./.env
+  frontend:
+    image: glebchik57/ah_frontend:v0.1 
+    volumes:
+      - ../frontend/:/app/result_build/
+    env_file:
+      - ./.env
+    ports:
+      - '3000:3000'
+    depends_on:
+      - backend
+  nginx:
+    image: glebchik57/ah_getaway:v0.1
+    ports:
+      - "8000:80"
+    restart: always
+    volumes:
+      - ../frontend/build:/usr/share/nginx/html/
+      - ../docs/:/usr/share/nginx/html/api/docs/
+      - media_value:/var/html/media/
+      - static_value:/var/html/static/
+    depends_on:
+      - backend
+      - frontend
+    
+  parcer:
+    image: glebchik57/ah_parcer
+    restart: always
+    env_file:
+      - ./.env
+    depends_on:
+      - nginx
+    volumes:
+      - parcer_logs:/app/logs/
+
+volumes:
+  media_value:
+  static_value:
+  parcer_logs:
