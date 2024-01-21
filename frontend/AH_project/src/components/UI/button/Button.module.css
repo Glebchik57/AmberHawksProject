@@ -19,3 +19,9 @@
   background: var(--dark-orange);
   transition: all 1s;
 }
+
+@media (max-width: 768px) {
+  .btn {
+    width: 90%;
+  }
+}

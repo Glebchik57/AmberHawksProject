@@ -3,8 +3,11 @@ import React from 'react';
 import styles from './News.module.css'
 import { NEWS } from '../../../../mock/team/const';
 import Link from 'next/link';
+import { getNews } from '../../../../api/api'
 
-export default function News() {
+async function News() {
+  const news = await getNews();
+  console.log(news)
   return (
     <div className={styles.news}>
       <div className={styles.news__header}>
@@ -23,3 +26,5 @@ export default function News() {
     </div >
   );
 }
+
+export default News

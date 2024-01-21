@@ -37,7 +37,64 @@
 }
 
 .checkbox {
-  background: grey;
+  margin-right: 10px;
+}
+
+.checkbox:checked,
+.checkbox:not(:checked) {
+  position: absolute;
+  left: -9999px;
+}
+
+.checkbox:checked + .checkbox__label,
+.checkbox:not(:checked) + .checkbox__label {
+  display: inline-block;
+  position: relative;
+  padding-left: 28px;
+  line-height: 20px;
+  cursor: pointer;
+}
+
+.checkbox:checked + .checkbox__label::before,
+.checkbox:not(:checked) + .checkbox__label::before {
+  content: '';
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 18px;
+  height: 18px;
+  border: 1px solid var(--white);
+  background-color: var(--background);
+}
+
+.checkbox:checked + .checkbox__label::after,
+.checkbox:not(:checked) + .checkbox__label::after {
+  content: '';
+  position: absolute;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  left: 2px;
+  top: 4px;
+  width: 15px;
+  height: 8px;
+  border-radius: 1px;
+  border-left: 4px solid var(--orange);
+  border-bottom: 4px solid var(--orange);
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.checkbox:not(:checked) + .checkbox__label::after {
+  opacity: 0;
+}
+
+.checkbox:checked + .checkbox__label::after {
+  opacity: 1;
 }
 
 .button {
@@ -46,7 +103,7 @@
   color: var(--white);
   border: 2px solid var(--white);
   border-radius: 2px;
-  padding: 10px 20px;
+  padding: 16px 20px;
   font-weight: 700;
   transition: background-color 1s;
 }
@@ -59,4 +116,52 @@
 .formWrapper {
   display: grid;
   grid-template-columns: 1fr 1fr;
+}
+
+.checkbox__label {
+  font-size: 0.9rem;
+}
+
+@media (max-width: 1200px) {
+  .title {
+    padding: 0px 10px;
+  }
+
+  .form {
+    padding-left: 10px;
+  }
+}
+
+@media (max-width: 950px) {
+  .form {
+    padding-right: 0px;
+    margin-top: 10px;
+  }
+
+  .checkbox__label {
+    font-size: 0.7rem;
+  }
+}
+
+@media (max-width: 795px) {
+  .image {
+    display: none;
+  }
+
+  .formWrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-bottom: 20px;
+    padding: 0px 10px;
+  }
+
+  .wrapper {
+    background: none;
+  }
+}
+
+@media (max-width: 400px) {
+  .title {
+    font-size: 25px;
+  }
 }

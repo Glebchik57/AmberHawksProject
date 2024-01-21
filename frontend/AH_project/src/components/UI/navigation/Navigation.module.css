@@ -12,6 +12,20 @@
 .header__nav {
   display: flex;
   gap: 35px;
+  margin-right: 10px;
+}
+
+.header__burger {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 .header__text {
@@ -60,4 +74,39 @@
 
 .active {
   border-bottom: 4px solid var(--orange);
+}
+
+@media (max-width: 1078px) {
+  .header__nav {
+    gap: 15px;
+  }
+}
+
+@media (max-width: 965px) {
+  .logo {
+    margin: 0px auto;
+  }
+  .header__nav {
+    display: none;
+  }
+  .header__burger {
+    display: flex;
+    flex-direction: column;
+    top: 25px;
+    left: 20px;
+    white-space: normal;
+    clip-path: inset(0%);
+    clip: auto;
+    overflow: visible;
+    margin: 0%;
+    width: 50px;
+    height: 30px;
+    transform: rotate(0deg);
+    transition: transform 1s;
+  }
+  .header__burgerItem {
+    background: var(--white);
+    height: 4px;
+    margin: 3px 0;
+  }
 }

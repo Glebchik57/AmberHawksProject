@@ -25,3 +25,13 @@
   text-align: center;
   margin-top: 50px;
 }
+
+@media (max-width: 965px) {
+  .main__title {
+    font-size: 12vw;
+  }
+
+  .main__subtext {
+    font-size: 3vw;
+  }
+}

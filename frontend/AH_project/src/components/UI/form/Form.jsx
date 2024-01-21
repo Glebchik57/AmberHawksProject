@@ -12,12 +12,12 @@ export default function Form({ img }) {
 
                     <div className={styles.checkbox_wrapper}>
                         <input className={styles.checkbox} type="checkbox" id="checkbox" />
-                        <label htmlFor="checkbox">Нажимая отправить я согласен с политикой обработки ПД</label>
+                        <label className={styles.checkbox__label} htmlFor="checkbox">Нажимая отправить я согласен с политикой обработки ПД</label>
                     </div>
 
                     <button className={styles.button} type="submit">Отправить заявку</button>
                 </form>
-                <Image
+                <Image className={styles.image}
                     width={600}
                     height={500}
                     src={img}

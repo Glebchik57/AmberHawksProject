@@ -45,6 +45,11 @@ export default function Navigation() {
       <div className={styles.container}>
         <Link href='/' className={styles.logo}></Link>
         <div>
+          <div className={styles.header__burger}>
+            <div className={styles.header__burgerItem}></div>
+            <div className={styles.header__burgerItem}></div>
+            <div className={styles.header__burgerItem}></div>
+          </div>
           <nav>
             <ul className={styles.header__nav}>
               {navLink.map(({ link, name }) => (

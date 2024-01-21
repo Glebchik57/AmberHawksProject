@@ -49,3 +49,64 @@
   font-size: 12px;
   color: rgba(255, 255, 255, 0.6);
 }
+
+.title {
+  display: none;
+}
+
+@media (max-width: 1210px) {
+  .social {
+    padding-right: 10px;
+  }
+}
+
+@media (max-width: 895px) {
+  .social {
+    padding-right: 10px;
+  }
+
+  .logo {
+    display: none;
+  }
+
+  .wrapper {
+    padding-left: 10px;
+  }
+}
+
+@media (max-width: 690px) {
+  .wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 35px;
+    border: none;
+  }
+
+  .title {
+    display: block;
+    font-weight: 700;
+    font-size: 2.5em;
+    margin: 40px 0 23px;
+    border-bottom: 3px solid var(--white);
+    padding-bottom: 15px;
+    text-transform: uppercase;
+    width: 95%;
+  }
+
+  .container {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px 10px;
+  }
+
+  .agreements {
+    flex-direction: column;
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 400px) {
+  .title {
+    font-size: 25px;
+  }
+}

@@ -1,5 +1,4 @@
 import styles from './PlayersList.module.css'
-// import { playersList } from "../../../../mock/team/mock"
 import PlayersItem from "../PlayersItem/PlayersItem"
 import { getPlayers } from '../../../../api/api'
 

@@ -6,7 +6,7 @@ import KidsPage from '../../components/pages/Kids/KidsPage';
 
 
 export default async function Kids() {
-    const imageForm = '/kids_form.png'
+    const imageForm = '/la28.jpg'
     return (
         <>
             <Navigation />

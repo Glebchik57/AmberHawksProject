@@ -37,3 +37,45 @@
   cursor: pointer;
   transition: color 1s;
 }
+
+@media (max-width: 1132px) {
+  .news__list {
+    display: flex;
+    justify-content: space-around;
+  }
+}
+
+@media (max-width: 759px) {
+  .news__list {
+    padding-bottom: 100px;
+    gap: 0px;
+  }
+  .news {
+    position: relative;
+  }
+  .news__button {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--white);
+    transition: color 1s;
+    font-size: 18px;
+    font-weight: 600;
+    border: 2px solid var(--white);
+    border-radius: 4px;
+    padding: 12px 20px 12px 20px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .news__title {
+    font-size: 35px;
+  }
+}
+
+@media (max-width: 400px) {
+  .news__title {
+    font-size: 25px;
+  }
+}

@@ -10,10 +10,11 @@ export default function Footer() {
     return (
         <div className={styles.footer}>
             <div className={styles.wrapper}>
-                <Image
+                <Image className={styles.logo}
                     src={image}
                     alt='logo'
                 />
+                <div className={styles.title}>Контакты</div>
                 <div className={styles.phone}>
                     <div>
                         <Link className={styles.phoneLink} href="tel:+74012346578">+7 (4012) 346-578</Link>

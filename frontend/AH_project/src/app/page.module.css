@@ -12,3 +12,9 @@
   max-width: 1200px;
   margin: 0 auto;
 }
+
+@media (max-width: 1210px) {
+  .container {
+    padding: 0px 10px;
+  }
+}
