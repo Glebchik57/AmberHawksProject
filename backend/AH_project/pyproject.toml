@@ -43,6 +43,7 @@ ruff = "^0.0.291"
 mypy = "^1.5.1"
 black = "^23.9.1"
 django-stubs = {extras = ["compatible-mypy"], version = "^4.2.4"}
+pytest = "^7.4.4"
 
 
 [build-system]
