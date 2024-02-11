@@ -34,7 +34,7 @@ a:visited {
 a:hover {
   text-decoration: none;
   color: var(--dark-orange);
-  transition: color 1s;
+  transition: color 0.5s;
 }
 
 a {
@@ -137,7 +137,9 @@ body {
   color: var(--white);
 }
 
-/* .container {
-  max-width: 1200px;
-  margin: 0 auto;
-} */
+.none-info {
+  width: 100%;
+  text-align: center;
+  padding: 20px 0px 0px;
+  font-size: 24px;
+}

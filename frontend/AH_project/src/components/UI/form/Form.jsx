@@ -19,9 +19,10 @@ export default function Form({ img }) {
                 </form>
                 <Image className={styles.image}
                     width={600}
-                    height={500}
+                    height={400}
                     src={img}
                     alt='photo'
+                    style={{ width: '600px', height: '400px' }}
                 />
 
             </div>

@@ -1,5 +1,5 @@
 .about {
-  margin-top: 120px;
+  margin-top: 60px;
 }
 
 .about__header {
@@ -40,7 +40,7 @@
   margin-top: 37px;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: 3fr 1fr;
+  grid-template-rows: 1fr;
   gap: 4%;
 }
 
@@ -52,7 +52,7 @@
 
 .about__button {
   color: var(--white);
-  transition: color 1s;
+  transition: color 0.5s;
   font-size: 18px;
   font-weight: 600;
 }
@@ -91,6 +91,7 @@
   .about__text {
     grid-column-start: 1;
     grid-column-end: 7;
+    margin: 10px 0px 30px 0px;
   }
 }
 

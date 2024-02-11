@@ -16,14 +16,14 @@ export async function getEvents() {
     return data;
 }
 
-// async function getDocuments() {
-//     const res = await fetch('https://amfoot39.ru/api/documents')
-//     if (!res.ok) {
-//         console.log('Failed to fetch data')
-//     }
-//     const data = await res.json();
-//     return data;
-// }
+export async function getDocuments() {
+    const res = await fetch('https://amfoot39.ru/api/documents')
+    if (!res.ok) {
+        console.log('Failed to fetch data')
+    }
+    const data = await res.json();
+    return data;
+}
 
 export async function getNews() {
     const res = await fetch('https://amfoot39.ru/api/news')

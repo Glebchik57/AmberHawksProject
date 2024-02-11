@@ -3,10 +3,12 @@
 import Link from 'next/link';
 import styles from './Navigation.module.css';
 import { usePathname } from 'next/navigation';
-
+import { useState } from "react";
+import NavigationMobile from './navigationMobile/NavigationMobile.jsx';
 
 export default function Navigation() {
   const pathname = usePathname();
+  const [isOpen, setOpen] = useState(false);
 
   const navLink = [
     {
@@ -45,13 +47,14 @@ export default function Navigation() {
       <div className={styles.container}>
         <Link href='/' className={styles.logo}></Link>
         <div>
-          <div className={styles.header__burger}>
+          <div className={styles.header__burger} onClick={() => setOpen(true)}>
             <div className={styles.header__burgerItem}></div>
             <div className={styles.header__burgerItem}></div>
             <div className={styles.header__burgerItem}></div>
           </div>
-          <nav>
-            <ul className={styles.header__nav}>
+          <nav className={styles.header__nav}>
+            {isOpen ? <NavigationMobile navLink={navLink} pathname={pathname} setOpen={setOpen} /> : ''}
+            <ul className={styles.header__list}>
               {navLink.map(({ link, name }) => (
                 <li key={name}>
                   <Link className={`${styles.header__text} ${pathname == link ? styles.active : ''}`} href={link}>

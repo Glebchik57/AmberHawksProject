@@ -2,8 +2,6 @@ import React from 'react';
 import styles from './Home.module.css';
 import Button from './../../UI/button/Button.jsx';
 
-
-
 export default function Home() {
   return (
     <>

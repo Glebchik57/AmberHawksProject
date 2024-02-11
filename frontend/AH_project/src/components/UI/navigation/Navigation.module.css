@@ -10,6 +10,10 @@
 }
 
 .header__nav {
+  position: relative;
+}
+
+.header__list {
   display: flex;
   gap: 35px;
   margin-right: 10px;
@@ -77,7 +81,7 @@
 }
 
 @media (max-width: 1078px) {
-  .header__nav {
+  .header__list {
     gap: 15px;
   }
 }
@@ -86,7 +90,7 @@
   .logo {
     margin: 0px auto;
   }
-  .header__nav {
+  .header__list {
     display: none;
   }
   .header__burger {

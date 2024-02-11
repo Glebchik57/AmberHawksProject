@@ -6,6 +6,7 @@
 .list {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 100px;
 }
 
@@ -16,6 +17,8 @@
 .toggles {
   display: flex;
   gap: 10px;
+  max-width: 780px;
+  margin: 0px auto;
 }
 
 .toggle {
@@ -25,7 +28,40 @@
   margin-bottom: 20px;
 }
 
+.toggle:hover {
+  color: var(--orange);
+}
+
 .toggle_active {
   color: var(--orange);
   border-bottom: 2px solid var(--orange);
+}
+
+@media (max-width: 1200px) {
+  .wrapper {
+    padding: 0px 10px;
+    margin-bottom: 70px;
+  }
+}
+
+@media (max-width: 759px) {
+  .list {
+    gap: 50px;
+  }
+
+  .toggle {
+    text-transform: capitalize;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    border: 2px solid white;
+    padding: 10px 10px;
+    border-radius: 50px;
+  }
+
+  .toggle_active {
+    color: var(--basic);
+    background: var(--orange);
+    border: 2px solid var(--orange);
+  }
 }

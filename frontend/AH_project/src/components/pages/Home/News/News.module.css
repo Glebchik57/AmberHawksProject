@@ -27,7 +27,7 @@
 
 .news__button {
   color: var(--white);
-  transition: color 1s;
+  transition: color 0.5s;
   font-size: 18px;
   font-weight: 600;
 }
@@ -35,7 +35,7 @@
 .news__button:hover {
   color: var(--dark-orange);
   cursor: pointer;
-  transition: color 1s;
+  transition: color 0.5s;
 }
 
 @media (max-width: 1132px) {
@@ -59,7 +59,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     color: var(--white);
-    transition: color 1s;
+    transition: color 0.5s;
     font-size: 18px;
     font-weight: 600;
     border: 2px solid var(--white);

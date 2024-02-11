@@ -6,6 +6,9 @@ function Info() {
     return (
         <div className={styles.wrapper}>
             <Image
+                width={1200}
+                height={571}
+                priority={true}
                 src={image}
                 alt='info'
             />

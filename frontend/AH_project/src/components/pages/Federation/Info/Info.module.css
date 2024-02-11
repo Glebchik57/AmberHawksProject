@@ -3,6 +3,10 @@
   margin-bottom: 90px;
 }
 
+.info {
+  margin-top: 100px;
+}
+
 .title {
   font-weight: 700;
   font-size: 2.5em;
@@ -18,7 +22,7 @@
 }
 
 .video {
-  margin: 150px auto;
+  margin: 90px auto;
   height: 480px;
 }
 
@@ -34,16 +38,32 @@
 }
 
 @media (max-width: 890px) {
+  .wrapper {
+    color: var(--white);
+    margin-bottom: 60px;
+  }
+
   .text {
     width: 100%;
     padding: 0px 10px;
   }
 
   .video {
-    margin: 100px auto;
+    margin: 50px auto;
   }
 
   .title {
     padding: 0px 10px;
+    font-size: 2rem;
+  }
+
+  .info {
+    margin-top: 40px;
+  }
+}
+
+@media (max-width: 400px) {
+  .title {
+    font-size: 2rem;
   }
 }

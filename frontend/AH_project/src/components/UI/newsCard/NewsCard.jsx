@@ -6,12 +6,12 @@ export default function NewsCard({ item }) {
   return (
     <>
       <div className={styles.card}>
-        <span className={styles.data}>{item.data}</span>
+        <span className={styles.data}>{item.pub_date}</span>
         <div className={styles.img}>
           <Image
             fill
             sizes='100%'
-            src={item.img}
+            src={item.image}
             alt='photo'
           />
         </div>

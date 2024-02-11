@@ -1,4 +1,4 @@
-import styles from './NewsItem.module.css'
+import styles from '../NewsItem/NewsItem.module.css'
 import Image from 'next/image';
 
 function NewsItem({ events }) {
@@ -10,7 +10,6 @@ function NewsItem({ events }) {
                     height={440}
                     src={events.image}
                     alt='photo'
-                    style={{ width: "780px", maxHeight: "440px", minHeight: "286px", objectFit: "cover" }}
                 />
                 :
                 <Image className={styles.img}
@@ -20,7 +19,7 @@ function NewsItem({ events }) {
                     alt='photo'
                 />
             }
-            <span>{events.pub_date}</span>
+            <span>{events.date}</span>
             <h2 className={styles.title}>{events.title}</h2>
             <p className={styles.text}>
                 {events.text}

@@ -10,14 +10,15 @@
   font-size: 18px;
   font-weight: 500;
   line-height: 25px;
-  transition: background 1s;
+  transition: background 0.5s;
   border-radius: 4px;
   cursor: pointer;
 }
 
 .btn:hover {
+  color: white;
   background: var(--dark-orange);
-  transition: all 1s;
+  transition: all 0.5s;
 }
 
 @media (max-width: 768px) {

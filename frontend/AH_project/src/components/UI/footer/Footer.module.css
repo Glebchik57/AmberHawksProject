@@ -93,20 +93,34 @@
     width: 95%;
   }
 
-  .container {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 0px 10px;
-  }
-
   .agreements {
     flex-direction: column;
     margin-bottom: 10px;
+  }
+
+  .contacts {
+    display: flex;
+    width: 100%;
+    gap: 6%;
+  }
+}
+
+@media (max-width: 460px) {
+  .contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 0%;
   }
 }
 
 @media (max-width: 400px) {
   .title {
     font-size: 25px;
+  }
+
+  .container {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px 10px;
   }
 }

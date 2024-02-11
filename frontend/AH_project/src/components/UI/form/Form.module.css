@@ -158,6 +158,10 @@
   .wrapper {
     background: none;
   }
+
+  .checkbox_wrapper {
+    margin: 24px 0px;
+  }
 }
 
 @media (max-width: 400px) {
